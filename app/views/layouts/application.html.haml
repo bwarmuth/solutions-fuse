@@ -11,16 +11,65 @@
   %body{ data: { controller: "#{controller_name}", action: "#{action_name}" } }
     .fixed
       %nav.top-bar
-        %ul.title-area
-          %li.name
-            NAME
+        .nav-containment
+          %ul.title-area
+            %li.name
+              %a{href: "/"}
+                = image_tag("solutionsfuse-logo.png")
+          .top-bar-section
+            %ul.right
+              %li.has-dropdown
+                %a{href: "#"} Products
+                %ul.dropdown
+                  %li
+                    %a{href: "/products/31.html"} 31
+                  %li
+                    %a{href: "/products/52.html"} 52
+                  %li
+                    %a{href: "/products/53.html"} 53
+                  %li
+                    %a{href: "/products/#F9.html"} F9
+                  %li
+                    %a{href: "/products/SX2.html"} SX2
+                  %li
+                    %a{href: "/products/19.html"} 19
+                  %li
+                    %a{href: "/products/C2.html"} C2
+                  %li
+                    %a{href: "/products/H2.html"} H2
+                  %li
+                    %a{href: "/products/F2-A1.html"} F2-A1
+                  %li
+                    %a{href: "/products/JT-B1.html"} JT-B1
+                  %li
+                    %a{href: "/products/FZ-G1.html"} FZ-G1
+              %li.has-dropdown
+                %a{href: "#"} Case Studies
+                %ul.dropdown
+                  %li
+                    %a{href: "/case-studies/harley.html"} Harley Davidson
+                  %li
+                    %a{href: "/case-studies/amica.html"} Amica
+                  %li
+                    %a{href: "/case-studies/toledo.html"} Toledo Hospital
+                  %li
+                    %a{href: "/case-studies/nswc.html"} NSWC
+                  %li
+                    %a{href: "/case-studies/volvo.html"} Volvo of NA
+              %li.phonenumber
+                %span.calltext Call
+                877-217-3703
     .container
       .row
-        .twelve.columns
-          #flash
-            - flash.each do |name, msg|
-              %div{class: "alert-box #{name == :notice ? "success" : "alert"}"}
-                %a{class: "close", href: "#"} &times
-                = msg
+        .small-12.columns
+          .allcontent
 
-          = yield
+            = yield
+
+      %footer
+        .row
+          .small-12.columns
+            .footer-container
+              %p
+                = image_tag("panasonic-arp.png")
+              %p © 2013 Solutions Fuse | Toll Free 877-217-3703 | 5155 Financial Way Mason, OH 45040 USA

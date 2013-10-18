@@ -1,1 +1,51 @@
-something
+.row
+  .small-12.columns
+    .slideshow-wrapper
+      %ul{"class-" => "", "data-orbit" => ""}
+        %li
+          %a{href: "#"}
+            = image_tag("banner1.jpg")
+        %li
+          %a{href: "#"}
+            = image_tag("banner2.jpg")
+        %li
+          %a{href: "#"}
+            = image_tag("banner3.jpg")
+.row
+  .small-12.columns
+    .row
+      .small-8.columns
+        .leftcontent
+          %p.headertext
+            %span.blueheader About
+            %i Solutions Fuse
+          %p Concept of the number one tesseract not a sunrise but a galaxyrise, dispassionate extraterrestrial observer, across the centuries, emerged into consciousness star stuff harvesting star light Sea of Tranquility take root and flourish. From which we spring venture? Galaxies! Circumnavigated descended from astronomers stirred by starlight galaxies astonishment emerged into consciousness, inconspicuous motes of rock and gas. As a patch of light, Sea of Tranquility Apollonius of Perga. Rogue trillion?
+          %p How far away, gathered by gravity prime number vastness is bearable only through love, billions upon billions Rig Veda tendrils of gossamer clouds decipherment brain is the seed of intelligence laws of physics! Kindling the energy hidden in matter prime number the ash of stellar alchemy consciousness. Laws of physics. Hearts of the stars, at the edge of forever astonishment Apollonius of Perga! Across the centuries made in the interiors of collapsing stars explorations permanence of the stars, cosmos the carbon in our apple pies vanquish the impossible, Drake Equation are creatures of the cosmos quasar.
+      .small-4.columns
+        .contactform
+          %h4 Contact Us
+          %b Phone
+          %br
+          877.217.3703
+          %br
+          %br
+          %form
+            %label
+              %b Name
+              %span.required (required)
+            %input{name: "name", type: "text"}
+            %label
+              %b Email
+              %span.required (required)
+            %input{name: "email", type: "text"}
+            %label
+              %b Message
+            %textarea{cols: "50", name: "message", rows: "4"}
+            = image_tag("send-message.jpg")
+:javascript
+  $(document).foundation(['topbar', 'orbit'], {
+    timer_speed: 8000,
+    navigation_arrows: false,
+    slide_number: false,
+    pause_on_hover: false
+  });
