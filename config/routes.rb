@@ -1,9 +1,23 @@
 SolutionsFuse::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  root to: 'high_voltage/pages#show', id: 'index'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  get '/products/19' => 'high_voltage/pages#show', id: '19'
+  get '/products/31' => 'high_voltage/pages#show', id: '31'
+  get '/products/52' => 'high_voltage/pages#show', id: '52'
+  get '/products/53' => 'high_voltage/pages#show', id: '53'
+  get '/products/C2' => 'high_voltage/pages#show', id: 'C2'
+  get '/products/F9' => 'high_voltage/pages#show', id: 'F9'
+  get '/products/H2' => 'high_voltage/pages#show', id: 'H2'
+  get '/products/SX2' => 'high_voltage/pages#show', id: 'SX2'
+  get '/products/F2-A1' => 'high_voltage/pages#show', id: 'F2-A1'
+  get '/products/JT-B1' => 'high_voltage/pages#show', id: 'JT-B1'
+  get '/products/FZ-G1' => 'high_voltage/pages#show', id: 'FZ-G1'
+
+  get '/case-studies/harley' => 'high_voltage/pages#show', id: 'harley'
+  get '/case-studies/amica' => 'high_voltage/pages#show', id: 'amica'
+  get '/case-studies/toledo' => 'high_voltage/pages#show', id: 'toledo'
+  get '/case-studies/nswc' => 'high_voltage/pages#show', id: 'nswc'
+  get '/case-studies/volvo' => 'high_voltage/pages#show', id: 'volvo'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
