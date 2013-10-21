@@ -190,7 +190,13 @@ sup {
 .slideshow_nav li {
   float: left;
   list-style-type: none;
-  padding-right: 44px;
+  padding-right: 40px;
+}
+.slideshow_nav li.active img {
+  border: 4px solid #8d8d8d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .reveal-modal .orbit-container .orbit-slides-container > * .orbit-caption {
   background-color: transparent;
