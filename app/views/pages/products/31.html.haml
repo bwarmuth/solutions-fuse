@@ -829,18 +829,86 @@
   $(document).foundation('section', {
     deep_linking: true
   });
-  $(document).foundation('orbit', {
-    animation: 'fade',
-    slide_number: false,
-    timer: false,
-    bullets: false
-  });
   $(document).foundation('reveal', {
     animation: 'fade',
     dismissModalClass: 'close-reveal-modal'
   });
-  $('#imageGallery').bind('opened', function() {
-    $("ul.orbit-slides-container li").each( function() {
-      $(this).removeClass('active').css('z-index','2').css('margin-left','100%')
-    });
+  $(document).foundation('orbit', {
+    animation: 'fade',
+    slide_number: false,
+    timer: false,
+    bullets: false,
+    ready: function(){
+      console.log( initialSlideState );
+    },
+    after_slide_change: function(slideNum){
+        $("ul.slideshow_nav li").removeClass('active');
+        navItem = $("ul.slideshow_nav li[data-orbit-link=headline-"+(slideNum+1)+"]");
+        navItem.addClass('active');
+        
+        navContainer = $(".slideshow_nav_container");
+        navContWidth = navContainer.width();
+        nav = $("ul.slideshow_nav");
+        leftSide = parseInt(navItem.offset().left) - parseInt(navContainer.offset().left);
+        centered = (((parseInt(leftSide) + (parseInt(navItem.width()) / 2)) - ( parseInt(navContWidth) / 2 )) * -1) + parseInt(nav.css('left'));
+        
+        if( centered > 0 )
+          centered = 0;
+        
+        rightBound = ((nav.width() - navContWidth) * -1);
+        if( centered < rightBound )
+          centered = rightBound;
+
+        nav.animate({left: centered}, 250);
+      }
   });
+
+  $(".slideshow_arrows .arrow_right").on("click", function(){
+    slideNavCar('right');
+  });
+  $(".slideshow_arrows .arrow_left").on("click", function(){
+    slideNavCar('left');
+  });
+
+  function slideNavCar(direction){
+    nav = $("ul.slideshow_nav");
+    navContainer = $(".slideshow_nav_container");
+    navContWidth = navContainer.width();
+
+    if( direction == 'right' )
+      centered = parseInt(nav.css('left')) - navContWidth;
+    else
+      centered = parseInt(nav.css('left')) + navContWidth;
+    
+    if( centered > 0 )
+      centered = 0;
+    
+    rightBound = ((nav.width() - navContWidth) * -1);
+    if( centered < rightBound )
+      centered = rightBound;
+
+    nav.animate({left: centered}, 250);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
