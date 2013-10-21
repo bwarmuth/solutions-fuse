@@ -18,6 +18,6 @@ SolutionsFuse::Application.routes.draw do
   get '/case-studies/bocaraton' => 'high_voltage/pages#show', id: 'case-studies/bocaraton'
   get '/case-studies/harley' => 'high_voltage/pages#show', id: 'case-studies/harley'
   get '/case-studies/snapon' => 'high_voltage/pages#show', id: 'case-studies/snapon'
-  get '/case-studies/southern_maryland' => 'high_voltage/pages#show', id: 'case-studies/snapon'
-  get '/case-studies/volvo' => 'high_voltage/pages#show', id: 'case-studies/snapon'
+  get '/case-studies/southern_maryland' => 'high_voltage/pages#show', id: 'case-studies/southern_maryland'
+  get '/case-studies/volvo' => 'high_voltage/pages#show', id: 'case-studies/volvo'
 end
