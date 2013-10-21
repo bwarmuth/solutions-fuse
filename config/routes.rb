@@ -13,9 +13,11 @@ SolutionsFuse::Application.routes.draw do
   get '/products/JT-B1' => 'high_voltage/pages#show', id: 'products/JT-B1'
   get '/products/FZ-G1' => 'high_voltage/pages#show', id: 'products/FZ-G1'
 
+  get '/case-studies/arbormetrics' => 'high_voltage/pages#show', id: 'case-studies/arbormetrics'
+  get '/case-studies/bates' => 'high_voltage/pages#show', id: 'case-studies/bates'
+  get '/case-studies/bocaraton' => 'high_voltage/pages#show', id: 'case-studies/bocaraton'
   get '/case-studies/harley' => 'high_voltage/pages#show', id: 'case-studies/harley'
-  get '/case-studies/amica' => 'high_voltage/pages#show', id: 'case-studies/amica'
-  get '/case-studies/toledo' => 'high_voltage/pages#show', id: 'case-studies/toledo'
-  get '/case-studies/nswc' => 'high_voltage/pages#show', id: 'case-studies/nswc'
-  get '/case-studies/volvo' => 'high_voltage/pages#show', id: 'case-studies/volvo'
+  get '/case-studies/snapon' => 'high_voltage/pages#show', id: 'case-studies/snapon'
+  get '/case-studies/southern_maryland' => 'high_voltage/pages#show', id: 'case-studies/snapon'
+  get '/case-studies/volvo' => 'high_voltage/pages#show', id: 'case-studies/snapon'
 end
