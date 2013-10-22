@@ -9,7 +9,7 @@ SolutionsFuse::Application.routes.draw do
   get '/products/F9' => 'high_voltage/pages#show', id: 'products/F9'
   get '/products/H2' => 'high_voltage/pages#show', id: 'products/H2'
   get '/products/SX2' => 'high_voltage/pages#show', id: 'products/SX2'
-  get '/products/F2-A1' => 'high_voltage/pages#show', id: 'products/F2-A1'
+  get '/products/FZ-A1' => 'high_voltage/pages#show', id: 'products/FZ-A1'
   get '/products/JT-B1' => 'high_voltage/pages#show', id: 'products/JT-B1'
   get '/products/FZ-G1' => 'high_voltage/pages#show', id: 'products/FZ-G1'
 
